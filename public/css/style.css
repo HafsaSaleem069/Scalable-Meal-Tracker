@@ -1,0 +1,306 @@
+* {
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.navbar {
+    position: fixed;
+    /* Makes the navbar fixed to the top */
+    top: 0;
+    /* Ensures it stays at the top of the viewport */
+    width: 100%;
+    /* Ensures the navbar spans the entire width */
+    z-index: 1000;
+    /* Keeps the navbar on top of other elements */
+    background-color: rgb(0, 0, 0);
+    /* Optional: Add a background to the navbar for better visibility */
+    backdrop-filter: blur(5px);
+    /* Optional: Adds a slight blur for a modern look */
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+    /* Optional: Adds a shadow for depth */
+}
+
+.innerBody {
+    overflow-x: hidden;
+    /* Fallback color if the image doesn't load */
+    padding-top: 70px;
+    /* Adjust to the height of your navbar */
+}
+
+
+.navbar-brand {
+    width: 200px;
+}
+
+
+#register,
+#login {
+    background-color: rgb(220, 187, 108);
+    color: black;
+    border: none;
+    width: 100px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    padding: 10px;
+    text-align: center;
+}
+
+#register:hover,
+#login:hover {
+    text-decoration: underline;
+    background-color: rgb(217, 171, 63);
+
+}
+
+/* Time styling */
+#time {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-weight: 700;
+    color: rgb(220, 187, 108);
+
+}
+
+/* Clock icon */
+#clock {
+    width: 24px;
+    margin-right: 0.5rem;
+}
+
+
+/* Brand description container */
+.BrandDescription {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 87vh;
+    padding: 20px;
+    margin-top: 20px;
+    background-image: url("../images/background2.jpg");
+    background-size: cover;
+    /* Ensures the image covers the entire div */
+    background-position: center;
+    /* Centers the image within the div */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+
+}
+
+/* Limit the width of text content */
+.text-content {
+    display: inline-block;
+    /* Shrinks to fit the content */
+    max-width: 100%;
+    /* Prevents overflow */
+    text-align: center;
+    /* Ensures proper alignment */
+    padding: 0 50px;
+}
+
+.BrandDescription h1 {
+    font-size: 2.2rem;
+    padding-right: 100px;
+    font-size: 2.5rem;
+    color: rgb(212, 207, 183);
+    padding: 1rem;
+    margin: 0;
+    /* Removes extra margin */
+    display: inline-block;
+    /* Shrinks width to fit text */
+
+}
+
+#logo1 {
+    width: 300px;
+}
+
+#explorebtn {
+    font-size: 1.3rem;
+    background: none;
+    background-color: rgb(220, 187, 108);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+#explorebtn:hover {
+    background-color: rgb(217, 171, 63);
+    transform: translateY(-5px);
+}
+
+/* Add this keyframe animation for fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Move elements slightly downwards */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Return to original position */
+    }
+}
+
+/* Add keyframe for zooming in images */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.95);
+        /* Start slightly smaller */
+    }
+
+    100% {
+        transform: scale(1.1);
+        /* End at normal size */
+    }
+}
+
+/* Apply fade-in animation to the body and items */
+body {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.innerBody,
+.navbar,
+.BrandDescription,
+.burger1,
+.burgerOuterdiv,
+.bestSelling,
+.text-content,
+#explorebtn,
+.add {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Apply zoom-in effect to images */
+img {
+    animation: zoomIn 0.5s ease-in-out forwards;
+}
+
+#logo1 {
+    animation: zoomIn 0.5s ease-in-out forwards;
+}
+
+/* For smaller elements like buttons or divs you can add individual delays to stagger animations */
+.burger1 {
+    animation: fadeIn 0.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+    /* Delay for staggered effect */
+}
+
+#explorebtn {
+    animation-delay: 0.8s;
+    /* Delay for Explore button */
+}
+
+/* ----------------Category Page This Page Appears when a person regsiters----------- */
+.navbar-brand {
+    /* border: 2px solid wheat; */
+
+}
+
+.categorynav {
+    /* border: 2px solid wheat; */
+}
+
+.categorynav .navbar-nav .nav-item a {
+    color: wheat;
+    transition: all 0.3s ease;
+
+}
+
+.categorynav .navbar-nav .nav-item a:hover {
+    color: rgb(217, 171, 63);
+    text-decoration: underline;
+
+}
+
+/* Styling the links in the categorynav and offcanvas */
+#cart,
+#profile {
+    width: 30px;
+}
+
+/* ------------------LOGIN PAGE Styling-------------- */
+
+form {
+    border-radius: 15px;
+    padding: 20px;
+    color: rgb(212, 207, 183);
+
+}
+
+.BrandDescription p {
+    color: rgb(212, 207, 183);
+    font-size: 0.7rem;
+}
+
+form label {
+    font-size: 0.7rem;
+}
+
+form input {
+    width: 100%;
+    background-color: rgb(42, 42, 42);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 7px;
+
+}
+
+form input::placeholder {
+    font-size: 0.6rem;
+    /* Smaller font size for placeholders */
+    color: rgb(150, 150, 150);
+    /* Subtle color for placeholder text */
+}
+
+form button {
+    color: black;
+    background-color: rgb(243, 150, 21);
+    border: none;
+    font-size: 1.1rem;
+    padding: 7px 0;
+    border-radius: 10px;
+    font-weight: 800;
+    width: 70px;
+}
+
+
+#RegisterSection {
+    display: flex;
+    flex-direction: row;
+}
+
+.rightSection {
+    margin-top: 100px;
+}
+
+.rightSection input {
+    margin-bottom: px;
+}
+
+@media (max-width: 768px) {
+    .BrandDescription {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .blended-image {
+        max-width: 80%;
+    }
+}
